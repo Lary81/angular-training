@@ -1,40 +1,9 @@
 <div class="container">
 
-  <div class="card book-form-card" *ngIf="edited != null">
-    <div class="card-header text-center" [style.fontSize.px]="titleSize">Book</div>
-    <div class="book-form">
-      <div class="form-group">
-        <label>Title:</label>
-        <!--<input type="text" class="form-control" [value]="selected.title" (input)="selected.title = $event.target.value">-->
-        <input type="text" class="form-control" [(ngModel)]="edited.title">
-      </div>
-      <div class="form-group">
-        <label>Authors:</label>
-        <input type="text" class="form-control" [(ngModel)]="edited.authors" >
-      </div>
-      <div class="form-group">
-        <label>Category:</label>
-        <input type="color" [(ngModel)]="edited.category">
-      </div>
-      <div class="form-group">
-        <input type="checkbox" [(ngModel)]="edited.favourite">
-        <label>Favourite</label>
-      </div>
-      <div class="form-group">
-        <button class="btn" (click)="cancel()">Cancel</button>
-        <button class="btn btn-success" (click)="save()">Save</button>
-      </div>
-    </div>
-  </div>
+  <la-book-form *ngIf="edited != null" [book]="edited" (save)="save($event)" (cancel)="cancel()"></la-book-form>
 
   <div class="row justify-content-around">
-    <div *ngFor="let book of books" class="card book-card" [style.borderBottomColor]="book.category" (click)="select(book)">
-      <img class="card-img-top" src="http://placehold.it/320x240" alt="Book cover">
-      <div class="card-block">
-        <h4 class="card-title" [class.active]="selected == book">{{ book.title }}</h4>
-        <p class="card-text" [ngStyle]="authorsStyle">{{ book.authors }}</p>
-      </div>
-    </div>
+    <la-book-card *ngFor="let book of books" [book]="book" [isSelected]="book == selected" (selected)="select(book)"></la-book-card>
   </div>
 
 </div>

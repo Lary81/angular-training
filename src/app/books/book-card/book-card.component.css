@@ -1,0 +1,8 @@
+.book-card {
+    margin: 20px;
+    border-bottom: 4px solid blue;
+}
+
+.active {
+    color: blue;
+}

@@ -7,14 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-   selected = {}
-   edited = null
-
-  titleSize = 24
-
-  get authorsStyle() {
-    return { color: 'gray', letterSpacing: '2px' }
-  }
+  selected = {}
+  edited = null
 
   select(book) {
     this.selected = book
@@ -22,6 +16,7 @@ export class AppComponent {
   }
 
   save() {
+    console.log()
     Object.assign(this.selected, this.edited)
     this.reset()
   }
@@ -37,27 +32,6 @@ export class AppComponent {
 
   books = [
     {
-      id: 'book-1410',
-      title: 'Angular in action',
-      authors: 'Jan Kowalski',
-      category: '#00ff00',
-      favourite: true
-    },
-     {
-      id: 'book-1410',
-      title: 'Angular in action',
-      authors: 'Jan Kowalski',
-      category: '#00ff00',
-      favourite: true
-    },
-     {
-      id: 'book-1410',
-      title: 'Angular in action',
-      authors: 'Jan Kowalski',
-      category: '#00ff00',
-      favourite: true
-    },
-     {
       id: 'book-1410',
       title: 'Angular in action',
       authors: 'Jan Kowalski',
