@@ -3,6 +3,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/do';
 import { Http } from '@angular/http';
 import { BooksService } from './books.service';
+import { Book } from './book';
 import { Injectable } from '@angular/core';
 
 @Injectable()
@@ -13,10 +14,13 @@ export class HttpBooksService implements BooksService {
   constructor(private http: Http) {
   }
 
-  getAll(): Observable<any> {
+  getAll(): Observable<[Book]> {
     return this.http.get(this.baseUrl)
       .map(responese => responese.json())
+      .flatMap(books => books)
+      .map(book => new Book(book))
       .do(books => console.log(books))
+      .toArray()
   }
 
   save(book: any): Observable<any> {

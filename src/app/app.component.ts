@@ -4,6 +4,7 @@ import 'rxjs/Rx';
 import { Component, Inject, OnInit } from '@angular/core';
 
 import { BooksService } from '../app/books/books.service'
+import { Book } from '../app/books/book'
 
 @Component({
   selector: 'la-hello',
@@ -14,12 +15,12 @@ export class AppComponent implements OnInit {
 
   selected = {}
   edited = null
-  books: Observable<any>
+  books: Observable<Book>
   searchForm = new FormGroup({ "query": new FormControl() })
 
   private booksSubject = new Subject()
 
-  constructor( @Inject('BooksService') private booksService: BooksService) {
+  constructor(@Inject('BooksService') private booksService: BooksService) {
     this.books = this.booksSubject.asObservable()
   }
 
@@ -50,15 +51,12 @@ export class AppComponent implements OnInit {
     this.reset()
   }
 
-  private subscribe(observable: Observable<any>) {
+  private subscribe(observable: Observable<Book>) {
     observable.subscribe(() => this.refresh())
   }
 
   private refresh() {
     this.booksService.getAll()
-      //.flatMap(books => books)
-      //.filter(book => book['rating'] > 3)
-      //.toArray()
       .subscribe(books => this.booksSubject.next(books))
   }
 
