@@ -1,0 +1,22 @@
+<form [formGroup]="searchForm" class="search">
+  <div class="form-group">
+    <label>Search by title: </label>
+    <input class="from-control" formControlName="query" />
+  </div>
+</form>
+
+<div class="row">
+
+  <div class="col-md-9">
+    <div class="row books">
+      <la-book-card *ngFor="let book of books | async" [book]="book" [isSelected]="book == selected" (selected)="select(book)">
+        <la-stars [rating]="book.rating" book-header></la-stars>
+      </la-book-card>
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <la-book-form *ngIf="edited != null" [book]="edited" (save)="save($event)" (cancel)="cancel()"></la-book-form>
+  </div>
+
+</div>
