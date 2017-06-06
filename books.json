@@ -2,12 +2,12 @@
   "books": [
     {
       "id": 1,
-      "title": "aaa",
+      "title": "Angular",
       "authors": "",
       "category": "#00ff00",
       "favourite": true,
-      "rating": 3,
-      "genre": "Adventure"
+      "rating": 4,
+      "genre": "Drama"
     },
     {
       "id": 2,

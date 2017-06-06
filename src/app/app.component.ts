@@ -27,7 +27,7 @@ export class AppComponent implements OnInit {
     this.refresh()
     let queryObservable = this.searchForm.get('query')
       .valueChanges
-      .debounceTime(1000)
+      .debounceTime(500)
       .startWith('')
     this.books = Observable.combineLatest(this.booksSubject, queryObservable, this.filterByTitle)
   }
