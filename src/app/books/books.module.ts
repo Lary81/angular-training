@@ -8,7 +8,7 @@ import { BookCardComponent } from './book-card/book-card.component';
 import { BookFormComponent } from './book-form/book-form.component';
 import { HttpBooksService } from './http-books.service'
 import { BooksService } from './books.service';
-import { BooksComponent } from './books/books.component'
+import { BooksPanelComponent } from './books-panel/books-panel.component'
 import { routerModule } from './books.routing';
 import { BooksListComponent } from './books-list/books-list.component'
 
@@ -24,7 +24,7 @@ import { BooksListComponent } from './books-list/books-list.component'
   declarations: [
     BookCardComponent,
     BookFormComponent,
-    BooksComponent,
+    BooksPanelComponent,
     BooksListComponent
   ],
   providers: [
@@ -38,7 +38,7 @@ import { BooksListComponent } from './books-list/books-list.component'
   exports: [
     BookCardComponent,
     BookFormComponent,
-    BooksComponent
+    BooksPanelComponent
   ]
 })
 export class BooksModule { }

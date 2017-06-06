@@ -1,11 +1,11 @@
 import { RouterModule } from '@angular/router';
 
-import { BooksComponent } from '../books/books/books.component';
+import { BooksPanelComponent } from '../books/books-panel/books-panel.component';
 import { BooksListComponent } from '../books/books-list/books-list.component';
 
 const routesConfig = [
 	{
-		path: 'books', component: BooksComponent
+		path: 'books', component: BooksPanelComponent
 	},
 	{
 		path: 'books/list', component: BooksListComponent

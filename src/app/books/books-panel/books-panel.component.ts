@@ -8,10 +8,10 @@ import { Book } from '../book'
 
 @Component({
   selector: 'la-books',
-  templateUrl: './books.component.html',
-  styleUrls: ['./books.component.css']
+  templateUrl: './books-panel.component.html',
+  styleUrls: ['./books-panel.component.css']
 })
-export class BooksComponent implements OnInit {
+export class BooksPanelComponent implements OnInit {
 
   selected = {}
   edited = null
