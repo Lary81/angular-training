@@ -2,11 +2,12 @@
   "books": [
     {
       "id": 1,
-      "title": "Angular in action",
-      "authors": "Jan Kowalskie",
+      "title": "aaa",
+      "authors": "",
       "category": "#00ff00",
       "favourite": true,
-      "rating": 4
+      "rating": 3,
+      "genre": "Adventure"
     },
     {
       "id": 2,

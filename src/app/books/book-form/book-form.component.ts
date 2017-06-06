@@ -13,5 +13,13 @@ export class BookFormComponent {
   onSave = new EventEmitter()
   @Output('cancel')
   onCancel = new EventEmitter()
+  genres = ["Adventure", "Horror", "Drama", "Romans"]
+  rating = [1, 2, 3, 4, 5]
+
+  save(bookForm) {
+    if (bookForm.valid) {
+      this.onSave.emit(this.book);
+    }
+  }
 
 }

@@ -5,3 +5,7 @@
 .book-form {
     padding: 20px;
 }
+
+.errors {
+    color: red;
+}
