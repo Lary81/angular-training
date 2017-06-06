@@ -9,3 +9,7 @@
 .errors {
     color: red;
 }
+
+.rating {
+    margin: 8px 15px 20px 0px;
+}

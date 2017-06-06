@@ -20,13 +20,11 @@
       </select>
     </div>
     <label>Rating:</label>
-    <div *ngFor="let value of rating">
-      <label class="custom-control custom-radio">
+    <label class="custom-control custom-radio rating" *ngFor="let value of rating">
         <input id="radio1" name="radio" type="radio" class="custom-control-input" [(ngModel)]="book.rating" name="rating" [value]="value">
         <span class="custom-control-indicator"></span>
         <span class="custom-control-description">{{value}}</span>
-      </label>
-    </div>
+    </label>
     <div class="form-group">
       <label>Category:
       <input type="color" name="category" [(ngModel)]="book.category">
