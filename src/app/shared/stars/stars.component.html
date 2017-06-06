@@ -1,0 +1,4 @@
+<p class="box">
+  <span *ngFor="let star of stars" class="fa star" [ngClass]="{'fa-star':!star, 'fa-star-o':star}"></span>
+  <span>{{ rating }} stars</span>
+</p>
