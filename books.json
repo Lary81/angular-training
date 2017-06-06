@@ -1,20 +1,20 @@
 {
-	"books": [
-		{
-			"id": 1,
-			"title": "Angular in action",
-			"authors": "Jan Kowalski",
-			"category": "#00ff00",
-			"favourite": true,
-			"rating": 4
-		},
-		{
-			"id": 2,
-			"title": "ReactJS in action",
-			"authors": "Jan Kowalski",
-			"category": "#00ff00",
-			"favourite": true,
-			"rating": 3
-		}
-	]
+  "books": [
+    {
+      "id": 1,
+      "title": "Angular in action",
+      "authors": "Jan Kowalskie",
+      "category": "#00ff00",
+      "favourite": true,
+      "rating": 4
+    },
+    {
+      "id": 2,
+      "title": "ReactJS in action",
+      "authors": "Jan Kowalski",
+      "category": "#00ff00",
+      "favourite": true,
+      "rating": 3
+    }
+  ]
 }
