@@ -9,7 +9,8 @@ import { BookFormComponent } from './book-form/book-form.component';
 import { HttpBooksService } from './http-books.service'
 import { BooksService } from './books.service';
 import { BooksComponent } from './books/books.component'
-import { routerModule } from './books.routing'
+import { routerModule } from './books.routing';
+import { BooksListComponent } from './books-list/books-list.component'
 
 @NgModule({
   imports: [
@@ -23,7 +24,8 @@ import { routerModule } from './books.routing'
   declarations: [
     BookCardComponent,
     BookFormComponent,
-    BooksComponent
+    BooksComponent,
+    BooksListComponent
   ],
   providers: [
    // ArrayBooksService
