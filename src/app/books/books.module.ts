@@ -36,9 +36,6 @@ import { BooksListComponent } from './books-list/books-list.component'
   //  }, deps: ['BooksData'] }
   ],
   exports: [
-    BookCardComponent,
-    BookFormComponent,
-    BooksPanelComponent
   ]
 })
 export class BooksModule { }
