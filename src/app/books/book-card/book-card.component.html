@@ -4,5 +4,5 @@
     <h4 class="card-title" [class.active]="isSelected">{{ book.title }}</h4>
     <p class="card-text" [ngStyle]="authorsStyle">{{ book.authors }}</p>
   </div>
-  <ng-content></ng-content>
+  <ng-content select=[book-header]></ng-content>
 </div>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 
 import { BooksService } from '../app/books/books.service'
 
@@ -12,7 +12,7 @@ export class AppComponent {
   selected = {}
   edited = null
 
-  constructor(private booksService: BooksService) {
+  constructor(@Inject('BooksService') private booksService: BooksService) {
   }
 
   select(book) {

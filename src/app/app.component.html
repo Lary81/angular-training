@@ -7,7 +7,7 @@
   <div class="col-md-8">
     <div class="row justify-content-around">
       <la-book-card *ngFor="let book of books" [book]="book" [isSelected]="book == selected" (selected)="select(book)">
-        <la-stars [rating]="book.rating"></la-stars>
+        <la-stars [rating]="book.rating" book-header></la-stars>
       </la-book-card>
     </div>
   </div>
