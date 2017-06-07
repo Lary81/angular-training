@@ -21,6 +21,9 @@ const routesConfig: [Route] = [
 				data: { securityRedirect: '/' }
 			}
 		]
+	},
+	{
+		path: '**', redirectTo: 'books'
 	}
 ]
 

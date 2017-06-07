@@ -1,8 +1,11 @@
 import { Route, RouterModule } from '@angular/router';
 
-const routesConfig: [Route]= [
+const routesConfig: [Route] = [
 	{
-		path: '**', redirectTo: 'books'
+		path: 'lazy', loadChildren: './books/books.module#BooksModule'
+	},
+	{
+		path: '**', redirectTo: 'lazy/books'
 	}
 ]
 

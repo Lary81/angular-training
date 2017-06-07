@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { BooksModule } from './books/books.module';
 import { AppComponent } from './app.component';
 import booksData from './books.data';
 import { routerModule } from './app.routing'
@@ -12,7 +11,6 @@ import { routerModule } from './app.routing'
   ],
   imports: [
     BrowserModule,
-    BooksModule,
     routerModule
   ],
   providers: [
