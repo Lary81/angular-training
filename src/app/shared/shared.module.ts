@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { StarsComponent } from './stars/stars.component';
 import { HighlightDirective } from './highlight.directive';
 import { RepeatDirective } from './repeat.directive';
+import { UpperCasePipe } from './upper-case.pipe';
 
 @NgModule({
   imports: [
@@ -11,12 +12,14 @@ import { RepeatDirective } from './repeat.directive';
   declarations: [
     StarsComponent,
     HighlightDirective,
-    RepeatDirective
+    RepeatDirective,
+    UpperCasePipe
   ],
   exports: [
     StarsComponent,
     HighlightDirective,
-    RepeatDirective
+    RepeatDirective,
+    UpperCasePipe
   ]
 })
 export class SharedModule { }
