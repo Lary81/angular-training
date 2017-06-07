@@ -9,7 +9,7 @@ import { BooksListComponent } from '../books/books-list/books-list.component';
 
 const routesConfig: [Route] = [
 	{
-		path: 'books', component: BooksPanelComponent
+		path: 'books-panel', component: BooksPanelComponent
 	},
 	{
 		path: 'books-list', component: BooksListComponent,
