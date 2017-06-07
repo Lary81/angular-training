@@ -1,6 +1,6 @@
 import { Observable } from 'rxjs/Rx';
 import { Inject } from '@angular/core';
-import { BooksService } from './books.service';
+import { BooksService } from './books-service/books.service';
 import { Book } from './book';
 import { ActivatedRouteSnapshot, Resolve, RouterStateSnapshot } from '@angular/router';
 

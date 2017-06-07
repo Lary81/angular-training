@@ -3,7 +3,7 @@ import { Observable, Subject } from 'rxjs/Rx';
 import 'rxjs/Rx';
 import { Component, Inject, OnInit } from '@angular/core';
 
-import { BooksService } from '../books.service'
+import { BooksService } from '../books-service/books.service'
 import { Book } from '../book'
 
 @Component({

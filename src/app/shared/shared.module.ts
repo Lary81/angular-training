@@ -1,16 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { StarsComponent } from './stars/stars.component';
+import { HighlightDirective } from './highlight.directive';
+import { RepeatDirective } from './repeat.directive';
 
 @NgModule({
   imports: [
     CommonModule
   ],
   declarations: [
-    StarsComponent
+    StarsComponent,
+    HighlightDirective,
+    RepeatDirective
   ],
   exports: [
-    StarsComponent
+    StarsComponent,
+    HighlightDirective,
+    RepeatDirective
   ]
 })
 export class SharedModule { }

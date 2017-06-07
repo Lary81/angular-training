@@ -2,7 +2,9 @@
   <img class="card-img-top" src="http://placehold.it/320x240" alt="Book cover">
   <div class="card-block">
     <h4 class="card-title" [class.active]="isSelected">{{ book.title }}</h4>
-    <p class="card-text" [ngStyle]="authorsStyle">{{ book.authors }}</p>
+    <p class="card-text" [ngStyle]="authorsStyle">
+      <span laHighlight color="red">{{ book.authors }}</span>
+    </p>
   </div>
   <ng-content select=[book-header]></ng-content>
 </div>

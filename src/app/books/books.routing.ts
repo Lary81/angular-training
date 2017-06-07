@@ -18,7 +18,7 @@ const routesConfig: [Route] = [
 				path: ':id', component: BookFormComponent,
 				resolve: { book: BookResolver },
 				canActivate: [SecurityGuard],
-				data: { securityRedirect: '/' }
+				data: { securityRedirect: '' }
 			}
 		]
 	}

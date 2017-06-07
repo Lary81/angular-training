@@ -1,5 +1,6 @@
 import { Observable } from 'rxjs/Rx';
-import { Book } from './book';
+import { Book } from '../book';
+
 export interface BooksService {
 
 	getAll(): Observable<[Book]>

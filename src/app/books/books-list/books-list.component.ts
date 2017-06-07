@@ -1,5 +1,5 @@
 import { ActivatedRoute } from '@angular/router';
-import { BooksService } from '../books.service';
+import { BooksService } from '../books-service/books.service';
 import { Observable } from 'rxjs/Rx';
 import { Component, OnInit, Inject } from '@angular/core';
 

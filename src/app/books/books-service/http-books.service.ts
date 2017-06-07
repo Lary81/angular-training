@@ -3,7 +3,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/do';
 import { Http } from '@angular/http';
 import { BooksService } from './books.service';
-import { Book } from './book';
+import { Book } from '../book';
 import { Injectable } from '@angular/core';
 
 @Injectable()

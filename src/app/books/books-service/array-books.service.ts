@@ -1,4 +1,4 @@
-import { Book } from './book';
+import { Book } from '../book';
 import { Observable } from 'rxjs/Rx';
 import { BooksService } from './books.service';
 import { Inject, Injectable, Optional } from '@angular/core';
