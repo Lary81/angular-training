@@ -1,3 +1,4 @@
+import { BookResolver } from './book.resolver';
 import { StarsComponent } from '../shared/stars/stars.component';
 import { SharedModule } from '../shared/shared.module';
 import { NgModule } from '@angular/core';
@@ -29,7 +30,8 @@ import { BooksListComponent } from './books-list/books-list.component'
   ],
   providers: [
    // ArrayBooksService
-   { provide: 'BooksService', useClass: HttpBooksService }
+   { provide: 'BooksService', useClass: HttpBooksService },
+   BookResolver
 
   //  { provide: BooksService, useFactory: (books) => {
   //     return new BooksService(books)

@@ -1,3 +1,5 @@
+import { Book } from './book';
+import { Observable } from 'rxjs/Rx';
 import { BooksService } from './books.service';
 import { Inject, Injectable, Optional } from '@angular/core';
 
@@ -6,24 +8,30 @@ export class ArrayBooksService implements BooksService {
 
   private books = []
 
-  constructor(@Optional() @Inject('BooksData') books = []) {
-      this.books = books
+  constructor( @Optional() @Inject('BooksData') books = []) {
+    this.books = books
   }
 
-  getAll() {
-    return this.books
+  getById(id: number): Observable<Book> {
+    throw new Error("Method not implemented.");
   }
 
-  save(book) {
+  getAll(): Observable<[Book]> {
+    return Observable.of(this.books)
+  }
+
+  save(book): Observable<any> {
     book.id = this.nextId()
     this.books.push(book);
+    return Observable.empty()
   }
 
-  update(book) {
+  update(book): Observable<any> {
     let index = this.findIndex(book.id)
     if (index != -1) {
       this.books[index] = book
     }
+    return Observable.empty()
   }
 
   private findIndex(id: string) {

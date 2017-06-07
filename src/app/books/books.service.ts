@@ -1,9 +1,13 @@
+import { Observable } from 'rxjs/Rx';
+import { Book } from './book';
 export interface BooksService {
 
-	getAll()
+	getAll(): Observable<[Book]>
 
-	save(book)
+	getById(id: number): Observable<Book>
 
-	update(book)
+	save(book: Book): Observable<any>
+
+	update(book: Book): Observable<any>
 
 }

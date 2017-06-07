@@ -15,7 +15,8 @@
       "authors": "Jan Kowalskiss",
       "category": "#00ff00",
       "favourite": true,
-      "rating": 1
+      "rating": 1,
+      "genre": "Horror"
     },
     {
       "id": 3,

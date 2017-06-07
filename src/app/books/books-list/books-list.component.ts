@@ -12,7 +12,7 @@ import { Book } from '../book';
 })
 export class BooksListComponent {
 
-  books: Observable<Book>
+  books: Observable<[Book]>
 
   constructor( @Inject('BooksService') private booksService: BooksService, activatedRoute: ActivatedRoute) {
     this.books = this.booksService.getAll()

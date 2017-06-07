@@ -14,6 +14,12 @@ export class HttpBooksService implements BooksService {
   constructor(private http: Http) {
   }
 
+  getById(id: number): Observable<Book> {
+    return this.http.get(`${this.baseUrl}/${id}`)
+      .map(responese => responese.json())
+      .map(json => new Book(json))
+  }
+
   getAll(): Observable<[Book]> {
     return this.http.get(this.baseUrl)
       .map(responese => responese.json())
@@ -26,7 +32,7 @@ export class HttpBooksService implements BooksService {
   save(book: any): Observable<any> {
     return this.http.post(this.baseUrl, book)
   }
-  
+
   update(book: any): Observable<any> {
     return this.http.put(`${this.baseUrl}/${book.id}`, book)
   }
