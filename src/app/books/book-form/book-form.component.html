@@ -1,4 +1,4 @@
-<form #bookForm="ngForm" class="card book-form-card" novalidate="true" (ngSubmit)="save(bookForm)">
+<form #bookForm="ngForm" *ngIf="book != null" class="card book-form-card" novalidate="true" (ngSubmit)="save(bookForm)">
   <div class="card-header text-center">Book</div>
   <div class="book-form">
     <div class="form-group">

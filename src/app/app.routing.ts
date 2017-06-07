@@ -1,6 +1,6 @@
-import { RouterModule } from '@angular/router';
+import { Route, RouterModule } from '@angular/router';
 
-const routesConfig = [
+const routesConfig: [Route]= [
 	{
 		path: '**', redirectTo: 'books'
 	}

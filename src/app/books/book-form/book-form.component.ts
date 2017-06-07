@@ -1,4 +1,5 @@
-import { ActivatedRoute } from '@angular/router';
+import { Book } from '../book';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
@@ -6,7 +7,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   templateUrl: './book-form.component.html',
   styleUrls: ['./book-form.component.css']
 })
-export class BookFormComponent implements OnInit {
+export class BookFormComponent {
 
   @Input()
   book
@@ -19,15 +20,14 @@ export class BookFormComponent implements OnInit {
 
   editable = true
 
-  constructor(private route: ActivatedRoute) {
-  }
-
-  ngOnInit(): void {
-    if (!this.book) {
-      let book = this.route.snapshot.data.book
-      this.editable = false
-      this.book = book || {}
-    }
+  constructor(private route: ActivatedRoute, router: Router) {
+    router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        let book = this.route.snapshot.data.book
+        this.editable = false
+        this.book = book || null
+      }
+    })
   }
 
   save(bookForm) {

@@ -1,3 +1,4 @@
+import { SecurityGuard } from './security.guard';
 import { BookResolver } from './book.resolver';
 import { StarsComponent } from '../shared/stars/stars.component';
 import { SharedModule } from '../shared/shared.module';
@@ -31,7 +32,8 @@ import { BooksListComponent } from './books-list/books-list.component'
   providers: [
    // ArrayBooksService
    { provide: 'BooksService', useClass: HttpBooksService },
-   BookResolver
+   BookResolver,
+   SecurityGuard
 
   //  { provide: BooksService, useFactory: (books) => {
   //     return new BooksService(books)
