@@ -8,7 +8,7 @@ const routesConfig = [
 		path: 'books', component: BooksPanelComponent
 	},
 	{
-		path: 'books/list', component: BooksListComponent
+		path: 'books/list', component: BooksListComponent, data: { isProd: false }
 	},
 ]
 

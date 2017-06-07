@@ -19,7 +19,7 @@ export class HttpBooksService implements BooksService {
       .map(responese => responese.json())
       .flatMap(books => books)
       .map(book => new Book(book))
-      .do(books => console.log(books))
+      //.do(books => console.log(books))
       .toArray()
   }
 
