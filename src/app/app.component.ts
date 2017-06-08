@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'la-hello',
+  selector: 'la-app',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
