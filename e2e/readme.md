@@ -1,3 +1,3 @@
 npm install -g protractor
-webdroiver -manager update
+webdriver-manager update
 ng e2e

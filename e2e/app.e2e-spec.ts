@@ -5,9 +5,4 @@ describe('books App', () => {
     browser.get('/')
     expect(element(by.css('nav')).isPresent()).toBeTruthy()
   });
-
-  it('should display book form', () => {
-    browser.get('/books-panel')
-    browser.pause()
-  });
 });
