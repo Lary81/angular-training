@@ -6,12 +6,14 @@ import { BooksService } from '../app/books/books.service'
   selector: 'la-hello',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
+  //,providers: []
 })
 export class AppComponent {
 
   selected = {}
   edited = null
 
+  // @Inject jest wymagane poniewaz uzyliśmy interfejsu
   constructor(@Inject('BooksService') private booksService: BooksService) {
   }
 
