@@ -16,7 +16,7 @@ describe('Http books service', () => {
 	});
 
 	it('should retrun book with id', async(inject([HttpBooksService, MockBackend], (service, mockBackend) => {
-		prepareResponse(mockBackend, book)
+		mockResponse(mockBackend, book)
 		service.getById(book.id).subscribe(response => expect(response).toEqual(book));
 	})));
 

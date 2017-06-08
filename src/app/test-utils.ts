@@ -23,7 +23,7 @@ export function mockHttp(service) {
 	});
 }
 
-export function prepareResponse(mockBackend: MockBackend, response: any) {
+export function mockResponse(mockBackend: MockBackend, response: any) {
 	mockBackend.connections.subscribe(connection => {
 		connection.mockRespond(new Response(new ResponseOptions({ body: JSON.stringify(response) })));
 	})
