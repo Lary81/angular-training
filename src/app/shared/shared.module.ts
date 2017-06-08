@@ -6,7 +6,8 @@ import { HighlightDirective } from './highlight.directive';
 import { RepeatDirective } from './repeat.directive';
 import { UpperCasePipe } from './upper-case.pipe';
 
-import { EmailBlackListService } from './email-black-list.service'
+import { EmailBlackListService } from './email-black-list.service';
+import { HeaderComponent } from './header/header.component'
 
 @NgModule({
   imports: [
@@ -17,7 +18,8 @@ import { EmailBlackListService } from './email-black-list.service'
     HighlightDirective,
     RepeatDirective,
     UpperCasePipe,
-    EmailValidator
+    EmailValidator,
+    HeaderComponent
   ],
   exports: [
     StarsComponent,
